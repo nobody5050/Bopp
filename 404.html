@@ -3,6 +3,17 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-storage.js"></script>
 <script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAj_ilW3sPYkKg9zd3tbZcvGLg1ou1l00o",
+    authDomain: "test-e0e57.firebaseapp.com",
+    databaseURL: "https://test-e0e57.firebaseio.com",
+    projectId: "test-e0e57",
+    storageBucket: "test-e0e57.appspot.com",
+    messagingSenderId: "734076048929",
+    appId: "1:734076048929:web:41612dabaf67e345abb560"
+  };
+  firebase.initializeApp(firebaseConfig);
+
   var url = window.location.pathname;
   var storageRef = firebase.storage().ref();
   var spaceRef = storageRef.child('default');
