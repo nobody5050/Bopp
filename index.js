@@ -19,7 +19,7 @@ function Upload() {
   // Created a Storage Reference with root dir
   var storageRef = firebase.storage().ref();
   // Get the file from DOM
-  var file = document.getElementById("files").files[0];
+  const file = document.getElementById("files").files[0];
   console.log(file);
       
   //dynamically set reference to the file name
@@ -29,7 +29,7 @@ function Upload() {
   thisRef.put(file).then(function(snapshot) {
     alert("File Uploaded")
     console.log('Uploaded a blob or file!');
-    const publicUrl = format(`https://storage.googleapis.com/test-e0e57/${file.name}`);
+    const publicUrl = (`https://storage.googleapis.com/test-e0e57/${file.name}`);
     console.log(publicUrl);
   });
 }
