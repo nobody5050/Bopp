@@ -1,7 +1,14 @@
 <head>
-<title>hi</title>
-<img src="https://firebasestorage.googleapis.com/v0/b/test-e0e57.appspot.com/o/10.03.2021_12.33.33_REC.png?alt=media&token=c5391f36-f21c-414a-9204-8e64e1ee39da"></img>
-<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/test-e0e57.appspot.com/o/10.03.2021_12.33.33_REC.png?alt=media&token=c5391f36-f21c-414a-9204-8e64e1ee39da" />
-<meta property="og:image:width" content="300" />
-<meta property="og:image:height" content="300" />
+  <title>hi</title>
+  <img id="image" src="https://firebasestorage.googleapis.com/v0/b/test-e0e57.appspot.com/o/10.03.2021_12.33.33_REC.png?alt=media&token=c5391f36-f21c-414a-9204-8e64e1ee39da"></img>
+  <meta id="opengraph" property="og:image" content="https://firebasestorage.googleapis.com/v0/b/test-e0e57.appspot.com/o/10.03.2021_12.33.33_REC.png?alt=media&token=c5391f36-f21c-414a-9204-8e64e1ee39da" />
+  <meta property="og:image:width" content="3000" />
+  <meta property="og:image:height" content="3000" />
 </head>
+<script>
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var c = url.searchParams.get("url");
+  document["image"].src = c;
+  document["opengraph"].src = c;
+</script>
