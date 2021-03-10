@@ -29,5 +29,7 @@ function Upload() {
   thisRef.put(file).then(function(snapshot) {
     alert("File Uploaded")
     console.log('Uploaded a blob or file!');
+    const publicUrl = format(`https://storage.googleapis.com/${bucket.name}/${blob.name}`);
+    console.log(publicUrl);
   });
 }
