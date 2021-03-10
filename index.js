@@ -33,10 +33,3 @@ function Upload() {
     console.log(publicUrl);
   });
 }
-
-$(document).ready(function(){
-  var regex = /\?url=(.*)/,
-  $embedLink = document.location.href.match(regex)[1];
-  $('iframe').attr('src', $embedLink);
-  document.getElementById("submitform").style.display = "none";
-});
