@@ -1,10 +1,13 @@
 // Set the configuration for your app
 // TODO: Replace with your app's config object
 var firebaseConfig = {
-  apiKey: '<your-api-key>',
-  authDomain: '<your-auth-domain>',
-  databaseURL: '<your-database-url>',
-  storageBucket: '<your-storage-bucket-url>'
+  apiKey: "AIzaSyAj_ilW3sPYkKg9zd3tbZcvGLg1ou1l00o",
+  authDomain: "test-e0e57.firebaseapp.com",
+  databaseURL: "https://test-e0e57.firebaseio.com",
+  projectId: "test-e0e57",
+  storageBucket: "test-e0e57.appspot.com",
+  messagingSenderId: "734076048929",
+  appId: "1:734076048929:web:41612dabaf67e345abb560"
 };
 firebase.initializeApp(firebaseConfig);
 
