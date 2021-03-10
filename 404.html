@@ -1,2 +1,14 @@
 <img src="gs://test-e0e57.appspot.com/42FCF779-06E6-4897-B3E5-5A35EC2984F4.png"></img>
 <h1>hi</h1>
+<script>
+  var storageRef = firebase.storage().ref();
+  var spaceRef = storageRef.child('sweet_gift/vytcdc.png');
+  storageRef.child('sweet_gift/vytcdc.png').getDownloadURL().then(function(url) {
+    var test = url;
+    alert(url);
+    document.querySelector('img').src = test;
+
+  }).catch(function(error) {
+
+  });
+</script>
