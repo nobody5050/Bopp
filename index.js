@@ -16,6 +16,11 @@ var storage = firebase.storage();
 var storageRef = firebase.storage().ref();
 
 function Upload() {
+  var file = document.getElementById("files").files[0];
+  console.log(file);
+  //dynamically set reference to the file name
+  var thisRef = storageRef.child(file.name);
+  
   // Create the file metadata
   var metadata = {
     contentType: 'image/jpeg'
