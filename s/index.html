@@ -9,6 +9,6 @@
   var url_string = window.location.href;
   var url = new URL(url_string);
   var c = url.searchParams.get("url");
-  document.getElementId("image")[0].setAttribute("src", c);
-  document.getElementId("opengraph")[0].setAttribute("content", c);
+  document.getElementById("image")[0].setAttribute("src", c);
+  document.getElementById("opengraph")[0].setAttribute("content", c);
 </script>
