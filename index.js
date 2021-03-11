@@ -22,8 +22,10 @@ function Upload() {
   const file = document.getElementById("files").files[0];
   console.log(file);
       
+  const uuid = Math.random().toString(36).slice(2)
+  
   //dynamically set reference to the file name
-  var thisRef = storageRef.child(file.name);
+  var thisRef = storageRef.child(uuid);
 
   //put request upload file to firebase storage
   thisRef.put(file).then(function(snapshot) {
