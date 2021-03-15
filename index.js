@@ -1,3 +1,7 @@
+const reportStatus = message => {
+    status.innerHTML += `${message}<br/>`;
+    status.scrollTop = status.scrollHeight;
+}
 const selectButton = document.getElementById("submit");
 const fileInput = document.getElementById("files");
 const accountName = "bopp";
