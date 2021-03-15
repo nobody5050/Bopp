@@ -6,3 +6,22 @@ const containerName = "images";
 const containerURL = new azblob.ContainerURL(
     `https://${accountName}.blob.core.windows.net/${containerName}?${sasString}`,
     azblob.StorageURL.newPipeline(new azblob.AnonymousCredential));
+const uploadFiles = async () => {
+    try {
+        reportStatus("Uploading files...");
+        const promises = [];
+        for (const file of fileInput.files) {
+            const blockBlobURL = azblob.BlockBlobURL.fromContainerURL(containerURL, file.name);
+            promises.push(azblob.uploadBrowserDataToBlockBlob(
+                azblob.Aborter.none, file, blockBlobURL));
+        }
+        await Promise.all(promises);
+        reportStatus("Done.");
+        listFiles();
+    } catch (error) {
+        reportStatus(error.body.message);
+    }
+}
+
+selectButton.addEventListener("click", () => fileInput.click());
+fileInput.addEventListener("change", uploadFiles);
