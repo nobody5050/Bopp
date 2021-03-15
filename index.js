@@ -26,5 +26,4 @@ const uploadFiles = async () => {
     }
 }
 
-selectButton.addEventListener("click", () => fileInput.click());
 fileInput.addEventListener("change", uploadFiles);
