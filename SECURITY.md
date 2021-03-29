@@ -10,4 +10,4 @@ The following versions are currently supported.
 
 ## Reporting a Vulnerability
 
-Create a new issue and label it vulnerability. A maintainer will either escalate the issue to the project supervision team or mark the issue as invalid, and close it.
+Create a new security advisory and describe the issue in detail. A member of the dev team will help you as soon as possible
