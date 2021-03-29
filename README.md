@@ -1,5 +1,6 @@
 # Bopp - A simple, Open source, Image sharing website
 [![CodeFactor](https://www.codefactor.io/repository/github/nobody5050/bopp/badge)](https://www.codefactor.io/repository/github/nobody5050/bopp)
+
 Bopp is an image sharing website for link aggregators like reddit, that doesnt have ads, tracking, or subscriptions.
 
 ## Why use Bopp?
