@@ -35,7 +35,7 @@ function Upload() {
     const publicUrl = (`https://i.bopp.tk${uuid}`);
     console.log(publicUrl);
     var url = document.createElement("p");
-    var node = document.createTextNode("${uuid}");
+    var node = document.createTextNode("your shareable url is " + "https://i.bopp.tk/" + uuid);
     url.appendChild(node);
 
     var element = document.getElementById("div1");
