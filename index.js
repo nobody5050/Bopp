@@ -32,7 +32,13 @@ function Upload() {
   thisRef.put(file).then(function(snapshot) {
     alert("File Uploaded")
     console.log('Uploaded a blob or file!');
-    const publicUrl = (`https://i.bopp.tk${file.name}`);
+    const publicUrl = (`https://i.bopp.tk${uuid}`);
     console.log(publicUrl);
+    var url = document.createElement("p");
+    var node = document.createTextNode("${uuid}");
+    url.appendChild(node);
+
+    var element = document.getElementById("div1");
+    element.appendChild(url);
   });
 }
