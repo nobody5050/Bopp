@@ -32,7 +32,7 @@ function Upload() {
   thisRef.put(file).then(function(snapshot) {
     alert("File Uploaded")
     console.log('Uploaded a blob or file!');
-    const publicUrl = (`https://firebasestorage.googleapis.com/v0/b/test-e0e57.appspot.com/o/${file.name}?alt=media&token=c45a9272-2345-488f-b396-5ebe3f37d8b5`);
+    const publicUrl = (`https://i.bopp.tk${file.name}`);
     console.log(publicUrl);
   });
 }
