@@ -1,18 +1,17 @@
 <head>
-  <title>Image Hosting That Isnt Bad!</title>
+  <title>Image Hosting That Isn't Bad!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
   <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-storage.js"></script>
 </head>
 <body>
   <center>
-    <h1>Bopp - Image hosting that Isnt Bad!</h1>
-    <script src="index.js"></script>
-    <form id="submitform" action="Javascript:Upload()">
-      <input type="file" accept="image/*" id="files" name="filename">
-      <input type="submit">
-      <div id="div1">
-      </div>
+    <h1>Bopp - Image hosting that isn't bad!</h1>
+    <form id="imuploadform">
+      <input type="file" accept="image/*" id="files" name="filename" required>
+      <input type="submit" value="Upload">
+      <div id="msg"></div>
     </form>
   </center>
+  <script src="index.js"></script>
 </body>
