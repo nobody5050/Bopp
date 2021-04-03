@@ -1,5 +1,5 @@
 // TODO: Replace with your app's config object
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyAj_ilW3sPYkKg9zd3tbZcvGLg1ou1l00o",
   authDomain: "test-e0e57.firebaseapp.com",
   databaseURL: "https://test-e0e57.firebaseio.com",
@@ -11,34 +11,28 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Get a reference to the storage service, which is used to create references in our storage bucket
-var storage = firebase.storage();
-var storageRef = firebase.storage().ref();
+const storage = firebase.storage();
+const storageRef = storage.ref();
 
-function Upload() {      
-  // Created a Storage Reference with root dir
-  var storageRef = firebase.storage().ref();
+document.getElementById("imuploadform").addEventListener("submit", ev => {
   // Get the file from DOM
   const file = document.getElementById("files").files[0];
-  console.log(file);
+  console.debug(file);
      
   //Generate statistically unique fileid
   //TODO: verify uniqueness
-  const uuid = Math.random().toString(36).slice(2)
+  const uuid = Math.random().toString(36).slice(2);
   
   //dynamically set reference to the file name
-  var thisRef = storageRef.child(uuid);
+  const thisRef = storageRef.child(uuid);
 
   //put request upload file to firebase storage
-  thisRef.put(file).then(function(snapshot) {
-    alert("File Uploaded")
-    console.log('Uploaded a blob or file!');
-    const publicUrl = (`https://i.bopp.tk${uuid}`);
-    console.log(publicUrl);
-    var url = document.createElement("p");
-    var node = document.createTextNode("your shareable url is " + "https://i.bopp.tk/" + uuid);
-    url.appendChild(node);
-
-    var element = document.getElementById("div1");
-    element.appendChild(url);
+  thisRef.put(file).then(snapshot => {
+    console.debug('Uploaded a blob or file!');
+    const publicUrl = `https://i.bopp.tk/${uuid}`;
+    console.debug(publicUrl);
+    
+    document.getElementById("msg").textContent = `File uploaded! Your shareable url is ${publicUrl}`;
   });
-}
+  ev.preventDefault();
+});
