@@ -30,9 +30,9 @@ document.getElementById("imuploadform").addEventListener("submit", ev => {
   thisRef.put(file).then(snapshot => {
     console.debug('Uploaded a blob or file!');
     const publicUrl = `https://i.bopp.tk/${uuid}`;
-    console.debug(publicUrl);
     
-    document.getElementById("msg").textContent = `File uploaded! Your shareable url is ${publicUrl}`;
+    // add a message to the page with our file's public url
+    document.getElementById("msg").textContent = `File uploaded! Your shareable url is <a>${publicUrl}</a>`;
   });
   ev.preventDefault();
 });
