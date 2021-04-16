@@ -6,12 +6,15 @@
 </head>
 <body>
   <center>
-    <h1>Bopp - Image Hosting That Isn't bad!</h1>
-    <form id="imuploadform">
-      <input type="file" accept="image/*" id="files" name="filename" required>
+
+    <h1>Bopp - Image hosting that Isnt Bad!</h1>
+    <script src="index.js"></script>
+    <form id="submitform" action="Javascript:Upload()">
+      <input type="file" accept="image/*" id="files" name="filename" multiple="multiple" required>
       <div style="height:20px;" class="spacing"></div>
-      <input type="submit" value="Upload">
-      <div id="msg"></div>
+      <input type="submit">
+      <div id="div1">
+      </div>
     </form>
   </center>
   <script src="index.js"></script>
