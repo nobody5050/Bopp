@@ -32,7 +32,7 @@ document.getElementById("imuploadform").addEventListener("submit", ev => {
     const publicUrl = `https://i.bopp.tk/${uuid}`;
     
     // add a message to the page with our file's public url
-    document.getElementById("msg").innerHTML = 'File uploaded! Your shareable url is <a href="${publicUrl}">${publicUrl}<a>';
+    document.getElementById("msg").textContent = 'File uploaded! Your shareable url is ${publicUrl}';
   });
   ev.preventDefault();
 });
